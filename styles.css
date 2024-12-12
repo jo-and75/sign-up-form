@@ -21,20 +21,20 @@
 }
 
 label{ 
-  font-size: 1rem;
+  font-size: 0.6em;
   /* border: solid blue;    */
 }  
 
 .required-asterisk{ 
   font-size: 1.5em; 
   position: relative; 
-  top: 0.25em;
+  top: 0.3em;
 }
 
 .log-in{ 
   font-weight: 200; 
   margin-left: 5vh; 
-  font-size: 1.3em; 
+  font-size: 0.7em; 
   margin-top: 1em;
 }
 
@@ -43,7 +43,7 @@ span{
 } 
 
 .small-text{ 
-  font-size: 1.3vw; 
+  font-size: 1em; 
   text-wrap: wrap; 
   width: 50vw;    
   margin-left: 5vh ; 
@@ -58,17 +58,17 @@ span{
   width: 65vw; 
   background-color:rgba(32, 30, 30,0.04);   
   display: flex; 
-  flex-wrap: wrap;    
+  flex:1;
 }
 
 button {
   background-color: #596D48;
-  width: 12em;
-  height: 4.5em;
+  width: 10em;
+  height: 3.5em;
   border-radius: 1vh;
   color: white;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.7em;
   margin-top: 2vh; 
   margin-left: 5vh; 
   border: solid #596D48; 
@@ -79,7 +79,7 @@ button {
   /* border: solid black;      */
   position: relative;
   overflow: hidden; 
-  height: 100vh; 
+  height: 100%; 
   width: 35vw; 
 }  
 
@@ -94,7 +94,7 @@ input {
   height: 2em; 
   border-radius: 0.5vh;
   border: 2px solid #E5E7EB;
-  font-size: 1rem;  
+  font-size: 0.7em;  
   outline: none;
 }
 
@@ -112,7 +112,8 @@ input {
   /* border: solid red;  */
   width: 65vw; 
   display: flex; 
-  flex-direction: column; 
+  flex-direction: column;  
+  min-height: 100vh;
 }
 
 .sign-up-form{  
@@ -126,7 +127,6 @@ input {
 .form-footer{ 
   /* border: solid blue;  */
   background-color:rgba(32, 30, 30,0.04); 
-  margin-top: 5vh; 
   display: flex;  
   flex-direction: column;
   flex: 1;
@@ -139,7 +139,7 @@ input {
 }
 
 .form-text{  
-  font-size: 1.3vw; 
+  font-size: 1em; 
   text-wrap: wrap; 
   width: 50vw;    
   margin-left: 5vh ; 
@@ -149,10 +149,11 @@ input {
 }
 
 .logo-container{ 
-  font-size: 8vw; 
+  font-size: 4em; 
   top: 18vh; 
   display: flex; 
-  justify-content: center;
+  justify-content: center; 
+  align-items: center;
   position: absolute;
   width: 100%;  
   background-color:rgba(32, 30, 30,0.5);   
@@ -181,7 +182,8 @@ input:focus{
 }  
 
 .asterisk-disclaimer{ 
-  margin-left: 5vh;
+  margin-left: 5vh; 
+  font-size: 0.6em;
 } 
 
 button:focus{ 
