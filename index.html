@@ -34,39 +34,67 @@
 
         <div class="name-details"> 
           <div>
-            <label for="first_name">FIRST NAME</label> 
-            <input type="text" name="first_name" id="first_name">  
+            <label for="first_name">
+              FIRST NAME 
+              <span class="required-asterisk" aria-hidden="true">*</span>
+            </label> 
+            <input type="text" name="first_name" id="first_name" required aria-required="true" placeholder="Jane">  
           </div> 
           
           <div>
-            <label for="surname">LAST NAME</label> 
-            <input type="text" name="surname" id="surname">  
+            <label for="surname">
+              LAST NAME
+              <span class="required-asterisk" aria-hidden="true">*</span>
+            </label> 
+            <input type="text" name="surname" id="surname" required aria-required="true" placeholder="Doe">  
           </div>
         </div>
 
         <div class="contact-details"> 
           <div>
-            <label for="email">EMAIL</label> 
-            <input type="email" name="email" id="email"> 
+            <label for="email">EMAIL 
+              <span class="required-asterisk" aria-hidden="true">*</span>
+            </label> 
+            <input type="email" name="email" id="email" required  aria-required="true" placeholder="you@example.com"> 
           </div> 
 
           <div>
             <label for="phone-number">PHONE NUMBER</label> 
-            <input type="tel" id="phone-number" name="phone-number">
+            <input type="tel" id="phone-number" name="phone-number" placeholder="2567541" minlength="7" maxlength="15" pattern="^\d+$" 
+            title="Only numbers are allowed. Spaces aren't permitted.">
           </div> 
         </div>
     
         <div class="password">  
           <div>
-            <label for="password">PASSWORD</label> 
-            <input type="password" name="password" id="password"> 
+            <label for="password">PASSWORD
+              <span class="required-asterisk" aria-hidden="true">*</span>
+            </label> 
+            <input type="password" 
+                    name="password" 
+                    id="password" 
+                    required aria-required="true" 
+                    minlength="7" 
+                    maxlength="30" 
+                    pattern="" 
+                    title="Password should contain atleast one uppercase letter, special character and a number"> 
           </div> 
 
           <div>
-            <label for="password-confirmation">CONFIRM PASSWORD</label> 
-            <input type="password" name="password-confirmation" id="password-confirmation"> 
-          </div>
-        </div> 
+            <label for="password-confirmation">CONFIRM PASSWORD 
+              <span class="required-asterisk" aria-hidden="true">*</span>
+            </label> 
+            <input type="password" 
+                  name="password-confirmation" 
+                  id="password-confirmation"  
+                  required aria-required="true" 
+                  minlength="10" 
+                  maxlength="30"  
+                  pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!])[A-Za-z\d@#$%^&+=!]+$"
+                  title="Password should contain atleast one uppercase letter, special character and a number">   
+          </div> 
+        </div>  
+        <p class="asterisk-disclaimer">* indicates a required field.</p>
       </form>   
       <div class="form-footer">
         <button type="submit" form="sign-up-form">Create Account</button>

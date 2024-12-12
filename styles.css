@@ -2,7 +2,7 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box;      
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }    
 
 .container{
@@ -21,9 +21,15 @@
 }
 
 label{ 
-  font-size: 1.3em; 
+  font-size: 1rem;
   /* border: solid blue;    */
-} 
+}  
+
+.required-asterisk{ 
+  font-size: 1.5em; 
+  position: relative; 
+  top: 0.25em;
+}
 
 .log-in{ 
   font-weight: 200; 
@@ -64,7 +70,9 @@ button {
   font-weight: bold;
   font-size: 1em;
   margin-top: 2vh; 
-  margin-left: 5vh;
+  margin-left: 5vh; 
+  border: solid #596D48; 
+  outline: none;
 }
 
 .images{ 
@@ -73,7 +81,6 @@ button {
   overflow: hidden; 
   height: 100vh; 
   width: 35vw; 
-
 }  
 
 .bg-img{ 
@@ -83,12 +90,12 @@ button {
 }
 
 input {
-  width: 60%; /* Stretch input to match parent div */
-  height: 2em; /* Adjust height for consistent sizing */
+  width: 60%; 
+  height: 2em; 
   border-radius: 0.5vh;
-  border: 3px solid #E5E7EB;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
-  font-size: 1em;
+  border: 2px solid #E5E7EB;
+  font-size: 1rem;  
+  outline: none;
 }
 
 .name-details,
@@ -166,4 +173,21 @@ input {
   flex-direction: column; 
   margin-left: 5vh;  
   flex: 1;
+} 
+
+input:focus{  
+  border-color: rgb(47, 47, 226,0.7); 
+  box-shadow: 0 0 3px rgb(47, 47, 226,0.7) ;
+}  
+
+.asterisk-disclaimer{ 
+  margin-left: 5vh;
+} 
+
+button:focus{ 
+  box-shadow: 0 0 3px #596D48 ;
+} 
+
+input:invalid:focus{ 
+  border-color: red;
 }
