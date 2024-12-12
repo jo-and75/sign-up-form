@@ -1,12 +1,15 @@
 *{ 
   margin: 0; 
   padding: 0; 
-  box-sizing: border-box;     
-}   
+  box-sizing: border-box;      
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}    
 
-p{ 
-  font-weight: bold; 
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.container{
+  display: flex;  
+  flex-direction: row; 
+  height: 100vh; 
+  min-height: -webkit-fill-available;
 }
 
 @font-face {
@@ -18,129 +21,149 @@ p{
 }
 
 label{ 
-  font-size: 0.8em; 
-  margin-left: 0.9vh;
+  font-size: 1.3em; 
+  /* border: solid blue;    */
 } 
 
+.log-in{ 
+  font-weight: 200; 
+  margin-left: 5vh; 
+  font-size: 1.3em; 
+  margin-top: 1em;
+}
 
-input{ 
-  width: 80vw; 
+span{ 
+  font-family: 'Norse Bold', 'serif';
+} 
+
+.small-text{ 
+  font-size: 1.3vw; 
+  text-wrap: wrap; 
+  width: 50vw;    
+  margin-left: 5vh ; 
+  text-align: justify; 
+  font-weight: 550;  
+  margin-bottom: 2.5vw; 
+  margin-top: 2vw;
+}
+
+.form-header{ 
+  /* border: solid orange;   */
+  width: 65vw; 
+  background-color:rgba(32, 30, 30,0.04);   
+  display: flex; 
+  flex-wrap: wrap;    
+}
+
+button {
+  background-color: #596D48;
+  width: 12em;
+  height: 4.5em;
+  border-radius: 1vh;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 2vh; 
+  margin-left: 5vh;
+}
+
+.images{ 
+  /* border: solid black;      */
+  position: relative;
+  overflow: hidden; 
+  height: 100vh; 
+  width: 35vw; 
+
 }  
 
-input, 
-button,
-.log-in{ 
-  margin-left: 0.9vh; 
-  margin-bottom: 1.5vh;
-} 
-
-.log-in{ 
-  font-weight: 200;
+.bg-img{ 
+  object-fit:cover; 
+  width: 35vw;
+  height: 100vh;  
 }
 
-label, 
-input{ 
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-
-} 
-
-
-
-
-
-
-
-
-button{ 
-  background-color: #596D48; 
-  width: 30vw; 
-  height: auto; 
-  border-radius: 5px; 
-  color:white; 
-  font-weight: bold;
+input {
+  width: 60%; /* Stretch input to match parent div */
+  height: 2em; /* Adjust height for consistent sizing */
+  border-radius: 0.5vh;
+  border: 3px solid #E5E7EB;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+  font-size: 1em;
 }
 
-.form-text{ 
- 
-  text-align: justify;
+.name-details,
+.contact-details,
+.password{ 
+  margin-bottom: 1em;  
+  /* border: solid yellow;  */
+  height: auto;   
+  display: flex;  
+  width: 50vw;
 } 
 
-@media only screen and (min-width: 700px) { 
+.form{ 
+  /* border: solid red;  */
+  width: 65vw; 
+  display: flex; 
+  flex-direction: column; 
+}
 
-  .container{ 
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap;
-  } 
-  
-  .images{ 
-    /* border: solid black;     */ 
-    position: relative;
-    overflow: hidden; 
-    height: 100vh; 
-    width: 40vw;
-  }  
-  
-  .bg-img{ 
-    object-fit: cover; 
-    width: 100%;
-    height: 100%; 
-    position: relative; 
-  }
-  
-  input{ 
-    width: 20vw; 
-  }   
+.sign-up-form{  
+  display: flex; 
+  flex-direction: column;
+  /* border: solid green;  */
+  width: 65vw; 
+  flex: 1;
+} 
 
-  .name-details,
-  .contact-details,
-  .password{ 
-    display: inline-block; 
-    position: relative;  
-    margin-bottom: 2.5em; 
-  } 
+.form-footer{ 
+  /* border: solid blue;  */
+  background-color:rgba(32, 30, 30,0.04); 
+  margin-top: 5vh; 
+  display: flex;  
+  flex-direction: column;
+  flex: 1;
+}  
 
-  label{ 
-    position: absolute;  
-    top: -1.2em;
-  }  
+.name-details,
+.contact-details, 
+.password{ 
+  display: flex;
+}
 
-  .form-text{  
-    font-size: 1.5em; 
-    text-wrap: wrap; 
-    width: 50vw;  
-    margin-top: 1vh;
-    margin-bottom: 2.5vh;  
-    margin-left: 0.9vh ;
-    background-color:rgb(139, 135, 135, 0.3);
-  }
+.form-text{  
+  font-size: 1.3vw; 
+  text-wrap: wrap; 
+  width: 50vw;    
+  margin-left: 5vh ; 
+  text-align: justify; 
+  font-weight: 550; 
+  margin-top: 4vw; 
+}
 
-  .form-header{ 
-    border: solid red; 
-    width: 55vw; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center;
-  }
+.logo-container{ 
+  font-size: 8vw; 
+  top: 18vh; 
+  display: flex; 
+  justify-content: center;
+  position: absolute;
+  width: 100%;  
+  background-color:rgba(32, 30, 30,0.5);   
+  color: aliceblue; 
+  font-family: 'Norse Bold', serif;  
+}
 
-  .logo-container{ 
-    font-size: 10vw; 
-    top: 20%; 
-    display: flex; 
-    justify-content: center;
-    position: absolute;
-    width: 100%;  
-    background-color:rgba(32, 30, 30, 0.55);   
-    color: aliceblue; 
-    font-family: 'Norse Bold', serif;  
-  }
-  
- 
-  .logo{ 
-    width: 20%; 
-    height: auto;  
-    background-color:rgba(32, 30, 30,0.1);   
-  }  
-  
+.logo{ 
+  width: 6vw; 
+  height: auto;  
+}  
 
+.name-details > div, 
+.contact-details > div, 
+.password > div
+{ 
+  display: flex; 
+  flex-direction: column; 
+  margin-left: 5vh;  
+  flex: 1;
 }
